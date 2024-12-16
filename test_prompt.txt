@@ -1,0 +1,2 @@
+A self-driving car must choose between hitting a pedestrian or swerving into a wall, potentially harming the passenger. How should it decide?
+
