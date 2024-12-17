@@ -8,8 +8,7 @@ def load_css(file_path):
     st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
 
 
-def display_prompt_testing(client):
-    models = ["gpt-4", "gpt-4-turbo", "gpt-4o"]
+def display_prompt_testing(client, models):
 
     # Sidebar for Model Selection
     st.sidebar.header("Select Models for Prompt Testing")
@@ -67,9 +66,8 @@ def display_prompt_testing(client):
                 st.markdown(f"### {model} (Reflected Response)")
                 st.write(reflection_responses.get(model, "No reflection response received."))
 
-def display_interactive_chatbot(client):
+def display_interactive_chatbot(client, models):
     st.subheader("Interactive Chatbot")
-    models = ["gpt-4", "gpt-4-turbo", "gpt-4o"]
 
     # Sidebar for Chatbot Settings
     selected_model = st.sidebar.selectbox("Select Model", models)
